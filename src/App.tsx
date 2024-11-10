@@ -23,7 +23,16 @@ const educations = [
   },
 ];
 
-const experiences = ["Purdue University", "Talent Courtyard"];
+const experiences = [
+  {
+    name: "Purdue University",
+    imageURL: "PU-H-Full-RGB.svg",
+  },
+  {
+    name: "Talent Courtyard",
+    imageURL: "talentcourtyard_logo.jpeg",
+  },
+];
 
 const projects = [
   {
@@ -99,7 +108,9 @@ const App: React.FC = () => {
           <h2>Work Experience</h2>
           <ul>
             {experiences.map((e, i) => (
-              <li key={i}>{e}</li>
+              <li key={i}>
+                {e.name} <img src={e.imageURL} height={40} />
+              </li>
             ))}
           </ul>
         </div>
@@ -136,7 +147,7 @@ const App: React.FC = () => {
                     height: "80px",
                   }}
                 >
-                  <img src={s.imageURL} width={40} />
+                  <img src={s.imageURL} height={40} />
                   <small>{s.name}</small>
                 </Box>
               </Grid>
