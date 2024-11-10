@@ -6,6 +6,8 @@ import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 
 const educations = ["Full Stack Open", "Purdue University"];
 
@@ -64,10 +66,22 @@ const App: React.FC = () => {
         </div>
         <div>
           <Typography variant="h2">Projects</Typography>
-          <ul>
-            <li>Portfolio</li>
-            <li>Workout Buddy</li>
-          </ul>
+          <Grid container spacing={2}>
+            <Grid>
+              <Card>
+                <CardContent>
+                  <Typography variant="h3">Portfolio</Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid>
+              <Card>
+                <CardContent>
+                  <Typography variant="h3">Workout Buddy</Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
         </div>
         <div>
           <Typography variant="h2">Skills</Typography>
