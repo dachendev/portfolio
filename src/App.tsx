@@ -47,24 +47,44 @@ const projects = [
   },
 ];
 
-const skills = [
-  { name: "HTML", imageURL: "HTML5.svg" },
-  { name: "CSS", imageURL: "CSS3.svg" },
-  { name: "JavaScript", imageURL: "JavaScript.svg" },
-  { name: "TypeScript", imageURL: "TypeScript.svg" },
-  { name: "Python", imageURL: "Python.svg" },
-  { name: "React", imageURL: "React.svg" },
-  { name: "Material UI", imageURL: "Material UI.svg" },
-  { name: "Node", imageURL: "Node.js.svg" },
-  { name: "Express", imageURL: "Express.svg" },
-  { name: "PostgreSQL", imageURL: "PostgresSQL.svg" },
-  { name: "MongoDB", imageURL: "MongoDB.svg" },
-  { name: "Jest", imageURL: "Jest.svg" },
-  { name: "Playwright", imageURL: "Playwrite.svg" },
-  { name: "Docker", imageURL: "Docker.svg" },
-  { name: "GitHub", imageURL: "GitHub.svg" },
-  { name: "Figma", imageURL: "Figma.svg" },
-  { name: "Photoshop", imageURL: "Adobe Photoshop.svg" },
+const skillGroups = [
+  {
+    name: "Languages",
+    skills: [
+      { name: "HTML", imageURL: "HTML5.svg" },
+      { name: "CSS", imageURL: "CSS3.svg" },
+      { name: "JavaScript", imageURL: "JavaScript.svg" },
+      { name: "TypeScript", imageURL: "TypeScript.svg" },
+      { name: "Python", imageURL: "Python.svg" },
+    ],
+  },
+  {
+    name: "Frameworks",
+    skills: [
+      { name: "React", imageURL: "React.svg" },
+      { name: "Material UI", imageURL: "Material UI.svg" },
+      { name: "Node", imageURL: "Node.js.svg" },
+      { name: "Express", imageURL: "Express.svg" },
+    ],
+  },
+  {
+    name: "Databases",
+    skills: [
+      { name: "PostgreSQL", imageURL: "PostgresSQL.svg" },
+      { name: "MongoDB", imageURL: "MongoDB.svg" },
+    ],
+  },
+  {
+    name: "Tools",
+    skills: [
+      { name: "Jest", imageURL: "Jest.svg" },
+      { name: "Playwright", imageURL: "Playwrite.svg" },
+      { name: "Docker", imageURL: "Docker.svg" },
+      { name: "GitHub", imageURL: "GitHub.svg" },
+      { name: "Figma", imageURL: "Figma.svg" },
+      { name: "Photoshop", imageURL: "Adobe Photoshop.svg" },
+    ],
+  },
 ];
 
 const App: React.FC = () => {
@@ -135,25 +155,21 @@ const App: React.FC = () => {
         </div>
         <div>
           <h2>Skills</h2>
-          <Grid container spacing={2}>
-            {skills.map((s, i) => (
-              <Grid key={i}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    width: "80px",
-                    height: "80px",
-                  }}
-                >
-                  <img src={s.imageURL} height="40" />
-                  <small>{s.name}</small>
-                </Box>
-              </Grid>
+
+          <div>
+            {skillGroups.map((g, i) => (
+              <div key={i}>
+                <div>{g.name}</div>
+                <ul>
+                  {g.skills.map((s, j) => (
+                    <li>
+                      <img src={s.imageURL} height="20" /> {s.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </Grid>
+          </div>
         </div>
         <div>
           <p>Copyright &copy; {new Date().getFullYear()} Jacob Dachenhaus</p>
