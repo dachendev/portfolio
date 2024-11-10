@@ -89,6 +89,7 @@ const App: React.FC = () => {
               </a>
             </li>
           </ul>
+          <img src="duck.jpeg" width="200" />
         </div>
         <div>
           <h2>Education</h2>
@@ -109,7 +110,7 @@ const App: React.FC = () => {
           <ul>
             {experiences.map((e, i) => (
               <li key={i}>
-                {e.name} <img src={e.imageURL} height={40} />
+                {e.name} <img src={e.imageURL} height="40" />
               </li>
             ))}
           </ul>
@@ -147,7 +148,7 @@ const App: React.FC = () => {
                     height: "80px",
                   }}
                 >
-                  <img src={s.imageURL} height={40} />
+                  <img src={s.imageURL} height="40" />
                   <small>{s.name}</small>
                 </Box>
               </Grid>
