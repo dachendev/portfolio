@@ -23,6 +23,8 @@ const educations = [
   },
 ];
 
+const experiences = ["Purdue University", "Talent Courtyard"];
+
 const projects = [
   {
     name: "Portfolio",
@@ -90,6 +92,14 @@ const App: React.FC = () => {
                   {e.startDate} - {e.endDate}
                 </div>
               </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2>Work Experience</h2>
+          <ul>
+            {experiences.map((e, i) => (
+              <li key={i}>{e}</li>
             ))}
           </ul>
         </div>
