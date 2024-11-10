@@ -34,10 +34,12 @@ const App: React.FC = () => {
     <>
       <CssBaseline />
       <Container>
-        <h1>Jacob Dachenhaus</h1>
-        <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
+        <Typography variant="h1">Jacob Dachenhaus</Typography>
+        <Typography variant="body1">
+          Hi, I'm Jacob. I'm a Full Stack Developer.
+        </Typography>
         <div>
-          <h2>Socials</h2>
+          <Typography variant="h2">Socials</Typography>
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/dachendev/">
@@ -54,7 +56,7 @@ const App: React.FC = () => {
           </ul>
         </div>
         <div>
-          <h2>Educations</h2>
+          <Typography variant="h2">Education</Typography>
           <ul>
             {educations.map((name, i) => (
               <li key={i}>{name}</li>
@@ -62,14 +64,14 @@ const App: React.FC = () => {
           </ul>
         </div>
         <div>
-          <h2>Projects</h2>
+          <Typography variant="h2">Projects</Typography>
           <ul>
             <li>Portfolio</li>
             <li>Workout Buddy</li>
           </ul>
         </div>
         <div>
-          <h2>Skills</h2>
+          <Typography variant="h2">Skills</Typography>
           <Grid container spacing={2}>
             {skills.map((s, i) => (
               <Grid key={i}>
