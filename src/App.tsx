@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import EmailIcon from "@mui/icons-material/Email";
-// import Box from "@mui/material/Box";
+import Box from "@mui/material/Box";
 
 const educations = [
   {
@@ -124,17 +124,15 @@ const App: React.FC = () => {
         </div>
         <div>
           <h2>Education</h2>
-          <ul>
-            {educations.map((e, i) => (
-              <li key={i}>
-                <div>{e.name}</div>
-                <div>{e.tagline}</div>
-                <div>
-                  {e.startDate} - {e.endDate}
-                </div>
-              </li>
-            ))}
-          </ul>
+          {educations.map((e, i) => (
+            <Box key={i} sx={{ p: 2 }}>
+              <div>{e.name}</div>
+              <div>{e.tagline}</div>
+              <div>
+                {e.startDate} - {e.endDate}
+              </div>
+            </Box>
+          ))}
         </div>
         <div>
           <h2>Work Experience</h2>
