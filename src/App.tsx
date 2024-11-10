@@ -154,6 +154,9 @@ const App: React.FC = () => {
             ))}
           </Grid>
         </div>
+        <div>
+          <p>Copyright &copy; {new Date().getFullYear()} Jacob Dachenhaus</p>
+        </div>
       </Container>
     </>
   );
