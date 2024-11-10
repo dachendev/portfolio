@@ -9,7 +9,20 @@ import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
-const educations = ["Full Stack Open", "Purdue University"];
+const educations = [
+  {
+    name: "University of Helsinki",
+    tagline: "Full Stack Web Development",
+    startDate: "Jun 2024",
+    endDate: "Nov 2024",
+  },
+  {
+    name: "Purdue University",
+    tagline: "Bachelor of Science in Web Programming and Design",
+    startDate: "Aug 2018",
+    endDate: "Dec 2022",
+  },
+];
 
 const skills = [
   { name: "HTML", imageURL: "HTML5.svg" },
@@ -59,8 +72,14 @@ const App: React.FC = () => {
         <div>
           <Typography variant="h2">Education</Typography>
           <ul>
-            {educations.map((name, i) => (
-              <li key={i}>{name}</li>
+            {educations.map((e, i) => (
+              <li key={i}>
+                <div>{e.name}</div>
+                <div>{e.tagline}</div>
+                <div>
+                  {e.startDate} - {e.endDate}
+                </div>
+              </li>
             ))}
           </ul>
         </div>
