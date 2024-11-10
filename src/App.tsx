@@ -94,8 +94,8 @@ const App: React.FC = () => {
       <CssBaseline />
       <Container>
         <div>
-          <Grid container spacing={2} sx={{ paddingTop: 2 }}>
-            <Grid size="grow">
+          <Grid container spacing={2} sx={{ paddingTop: 5 }}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <h1>Jacob Dachenhaus</h1>
               <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
               <ul>
@@ -117,7 +117,7 @@ const App: React.FC = () => {
                 </li>
               </ul>
             </Grid>
-            <Grid size="grow" sx={{ textAlign: "center" }}>
+            <Grid size={{ xs: 12, sm: 6 }} sx={{ textAlign: "center" }}>
               <img src="duck.jpeg" width="250" />
             </Grid>
           </Grid>
@@ -138,7 +138,11 @@ const App: React.FC = () => {
           <h2>Work Experience</h2>
           <Grid container spacing={2}>
             {experiences.map((e, i) => (
-              <Grid key={i} size="grow" sx={{ textAlign: "center" }}>
+              <Grid
+                key={i}
+                size={{ xs: 12, sm: 6 }}
+                sx={{ textAlign: "center" }}
+              >
                 <img src={e.imageURL} height="40" alt={e.name} />
               </Grid>
             ))}
@@ -148,7 +152,7 @@ const App: React.FC = () => {
           <h2>Projects</h2>
           <Grid container spacing={2}>
             {projects.map((p, i) => (
-              <Grid key={i} size="grow">
+              <Grid key={i} size={{ xs: 12, md: 6 }}>
                 <Card>
                   <CardContent>
                     <h3>{p.name}</h3>
@@ -167,7 +171,7 @@ const App: React.FC = () => {
           <div>
             <Grid container spacing={2}>
               {skillGroups.map((g, i) => (
-                <Grid size="grow" key={i}>
+                <Grid size={{ xs: 12, sm: 6, md: 3 }} key={i}>
                   <h3>{g.name}</h3>
                   <ul>
                     {g.skills.map((s, j) => (
