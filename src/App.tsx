@@ -3,6 +3,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid2";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 const educations = ["Full Stack Open", "Purdue University"];
 
@@ -30,48 +33,59 @@ const App: React.FC = () => {
   return (
     <>
       <CssBaseline />
-      <h1>Jacob Dachenhaus</h1>
-      <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
-      <div>
-        <h2>Socials</h2>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/dachendev/">
-              LinkedIn <LinkedInIcon />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/dachendev">
-              GitHub <GitHubIcon />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>Educations</h2>
-        <ul>
-          {educations.map((name, i) => (
-            <li key={i}>{name}</li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h2>Projects</h2>
-        <ul>
-          <li>Portfolio</li>
-          <li>Workout Buddy</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Skills</h2>
-        <Grid container spacing={2}>
-          {skills.map((s, i) => (
-            <Grid key={i}>
-              {s.imageURL && <img src={s.imageURL} width="40" />} {s.name}
-            </Grid>
-          ))}
-        </Grid>
-      </div>
+      <Container>
+        <h1>Jacob Dachenhaus</h1>
+        <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
+        <div>
+          <h2>Socials</h2>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/dachendev/">
+                LinkedIn <LinkedInIcon />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/dachendev">
+                GitHub <GitHubIcon />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>Educations</h2>
+          <ul>
+            {educations.map((name, i) => (
+              <li key={i}>{name}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2>Projects</h2>
+          <ul>
+            <li>Portfolio</li>
+            <li>Workout Buddy</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Skills</h2>
+          <Grid container spacing={2}>
+            {skills.map((s, i) => (
+              <Grid key={i}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <img src={s.imageURL} width="40" />
+                  <Typography variant="caption">{s.name}</Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+      </Container>
     </>
   );
 };
