@@ -168,18 +168,20 @@ const App: React.FC = () => {
           <h2>Skills</h2>
 
           <div>
-            {skillGroups.map((g, i) => (
-              <div key={i}>
-                <div>{g.name}</div>
-                <ul>
-                  {g.skills.map((s, j) => (
-                    <li>
-                      <img src={s.imageURL} height="20" /> {s.name}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <Grid container spacing={2}>
+              {skillGroups.map((g, i) => (
+                <Grid size="grow" key={i}>
+                  <div>{g.name}</div>
+                  <ul>
+                    {g.skills.map((s, j) => (
+                      <li>
+                        <img src={s.imageURL} height="20" /> {s.name}
+                      </li>
+                    ))}
+                  </ul>
+                </Grid>
+              ))}
+            </Grid>
           </div>
         </div>
         <div>
