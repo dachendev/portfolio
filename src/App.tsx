@@ -23,6 +23,17 @@ const educations = [
   },
 ];
 
+const projects = [
+  {
+    name: "Portfolio",
+    description: "A portfolio website to showcase my skills.",
+  },
+  {
+    name: "Workout Buddy",
+    description: "An app to track workout progress and stay accountable.",
+  },
+];
+
 const skills = [
   { name: "HTML", imageURL: "HTML5.svg" },
   { name: "CSS", imageURL: "CSS3.svg" },
@@ -83,20 +94,16 @@ const App: React.FC = () => {
         <div>
           <h2>Projects</h2>
           <Grid container spacing={2}>
-            <Grid>
-              <Card>
-                <CardContent>
-                  <h3>Portfolio</h3>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid>
-              <Card>
-                <CardContent>
-                  <h3>Workout Buddy</h3>
-                </CardContent>
-              </Card>
-            </Grid>
+            {projects.map((p, i) => (
+              <Grid key={i}>
+                <Card>
+                  <CardContent>
+                    <h3>{p.name}</h3>
+                    <p>{p.description}</p>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </div>
         <div>
