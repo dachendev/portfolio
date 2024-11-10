@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import EmailIcon from "@mui/icons-material/Email";
+import Box from "@mui/material/Box";
 
 const educations = [
   {
@@ -93,27 +94,33 @@ const App: React.FC = () => {
       <CssBaseline />
       <Container>
         <div>
-          <h1>Jacob Dachenhaus</h1>
-          <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/in/dachendev/">
-                <LinkedInIcon />
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/dachendev">
-                <GitHubIcon />
-                GitHub
-              </a>
-            </li>
-            <li>
-              <EmailIcon />
-              dachendev@gmail.com
-            </li>
-          </ul>
-          <img src="duck.jpeg" width="200" />
+          <Grid container spacing={2}>
+            <Grid size="grow">
+              <h1>Jacob Dachenhaus</h1>
+              <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
+              <ul>
+                <li>
+                  <a href="https://www.linkedin.com/in/dachendev/">
+                    <LinkedInIcon />
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/dachendev">
+                    <GitHubIcon />
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <EmailIcon />
+                  dachendev@gmail.com
+                </li>
+              </ul>
+            </Grid>
+            <Grid size="grow">
+              <img src="duck.jpeg" width="200" />
+            </Grid>
+          </Grid>
         </div>
         <div>
           <h2>Education</h2>
@@ -143,7 +150,7 @@ const App: React.FC = () => {
           <h2>Projects</h2>
           <Grid container spacing={2}>
             {projects.map((p, i) => (
-              <Grid key={i}>
+              <Grid key={i} size="grow">
                 <Card>
                   <CardContent>
                     <h3>{p.name}</h3>
