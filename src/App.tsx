@@ -117,8 +117,8 @@ const App: React.FC = () => {
                 </li>
               </ul>
             </Grid>
-            <Grid size="grow">
-              <img src="duck.jpeg" width="200" />
+            <Grid size="grow" sx={{ textAlign: "center" }}>
+              <img src="duck.jpeg" width="250" />
             </Grid>
           </Grid>
         </div>
@@ -182,9 +182,9 @@ const App: React.FC = () => {
             </Grid>
           </div>
         </div>
-        <div>
+        <Box sx={{ textAlign: "center" }}>
           <p>Copyright &copy; {new Date().getFullYear()} Jacob Dachenhaus</p>
-        </div>
+        </Box>
       </Container>
     </>
   );
