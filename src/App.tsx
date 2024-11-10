@@ -1,4 +1,5 @@
 import React from "react";
+import { CssBaseline } from "@mui/material";
 
 const educations = ["Full Stack Open", "Purdue University"];
 
@@ -9,16 +10,20 @@ const skills = [
   "TypeScript",
   "Python",
   "React",
+  "Material UI",
   "Node.js",
   "Express",
   "PostgreSQL",
   "MongoDB",
+  "Docker",
+  "GitHub",
   "Figma",
 ];
 
 const App: React.FC = () => {
   return (
     <>
+      <CssBaseline />
       <h1>Jacob Dachenhaus</h1>
       <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
       <div>
