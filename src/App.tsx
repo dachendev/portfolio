@@ -3,10 +3,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid2";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import EmailIcon from "@mui/icons-material/Email";
 
 const educations = [
   {
@@ -107,6 +107,10 @@ const App: React.FC = () => {
                 <GitHubIcon />
                 GitHub
               </a>
+            </li>
+            <li>
+              <EmailIcon />
+              dachendev@gmail.com
             </li>
           </ul>
           <img src="duck.jpeg" width="200" />
