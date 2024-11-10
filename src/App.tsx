@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import EmailIcon from "@mui/icons-material/Email";
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 
 const educations = [
   {
@@ -31,7 +31,7 @@ const experiences = [
   },
   {
     name: "Talent Courtyard",
-    imageURL: "talentcourtyard_logo.jpeg",
+    imageURL: "talentcourtyard_logo_h.jpeg",
   },
 ];
 
@@ -138,13 +138,13 @@ const App: React.FC = () => {
         </div>
         <div>
           <h2>Work Experience</h2>
-          <ul>
+          <Grid container spacing={2}>
             {experiences.map((e, i) => (
-              <li key={i}>
-                {e.name} <img src={e.imageURL} height="40" />
-              </li>
+              <Grid key={i} size="grow" sx={{ textAlign: "center" }}>
+                <img src={e.imageURL} height="40" alt={e.name} />
+              </Grid>
             ))}
-          </ul>
+          </Grid>
         </div>
         <div>
           <h2>Projects</h2>
