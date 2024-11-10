@@ -34,12 +34,11 @@ const App: React.FC = () => {
     <>
       <CssBaseline />
       <Container>
-        <Typography variant="h1">Jacob Dachenhaus</Typography>
-        <Typography variant="body1">
-          Hi, I'm Jacob. I'm a Full Stack Developer.
-        </Typography>
         <div>
-          <Typography variant="h2">Socials</Typography>
+          <Typography variant="h1">Jacob Dachenhaus</Typography>
+          <Typography variant="body1">
+            Hi, I'm Jacob. I'm a Full Stack Developer.
+          </Typography>
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/dachendev/">
