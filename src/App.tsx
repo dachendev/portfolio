@@ -27,10 +27,12 @@ const projects = [
   {
     name: "Portfolio",
     description: "A portfolio website to showcase my skills.",
+    ghURL: "#",
   },
   {
     name: "Workout Buddy",
     description: "An app to track workout progress and stay accountable.",
+    ghURL: "#",
   },
 ];
 
@@ -100,6 +102,9 @@ const App: React.FC = () => {
                   <CardContent>
                     <h3>{p.name}</h3>
                     <p>{p.description}</p>
+                    <a href={p.ghURL}>
+                      <GitHubIcon />
+                    </a>
                   </CardContent>
                 </Card>
               </Grid>
