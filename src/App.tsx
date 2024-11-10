@@ -94,7 +94,7 @@ const App: React.FC = () => {
       <CssBaseline />
       <Container>
         <div>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} sx={{ paddingTop: 2 }}>
             <Grid size="grow">
               <h1>Jacob Dachenhaus</h1>
               <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
