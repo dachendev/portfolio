@@ -126,7 +126,7 @@ const App: React.FC = () => {
           <h2>Education</h2>
           {educations.map((e, i) => (
             <Box key={i} sx={{ p: 2 }}>
-              <div>{e.name}</div>
+              <h3>{e.name}</h3>
               <div>{e.tagline}</div>
               <div>
                 {e.startDate} - {e.endDate}
@@ -164,15 +164,14 @@ const App: React.FC = () => {
         </div>
         <div>
           <h2>Skills</h2>
-
           <div>
             <Grid container spacing={2}>
               {skillGroups.map((g, i) => (
                 <Grid size="grow" key={i}>
-                  <div>{g.name}</div>
+                  <h3>{g.name}</h3>
                   <ul>
                     {g.skills.map((s, j) => (
-                      <li>
+                      <li key={j}>
                         <img src={s.imageURL} height="20" /> {s.name}
                       </li>
                     ))}
