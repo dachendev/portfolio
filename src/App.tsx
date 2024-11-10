@@ -41,12 +41,14 @@ const App: React.FC = () => {
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/dachendev/">
-                LinkedIn <LinkedInIcon />
+                <LinkedInIcon />
+                LinkedIn
               </a>
             </li>
             <li>
               <a href="https://github.com/dachendev">
-                GitHub <GitHubIcon />
+                <GitHubIcon />
+                GitHub
               </a>
             </li>
           </ul>
@@ -75,10 +77,13 @@ const App: React.FC = () => {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
+                    justifyContent: "center",
                     alignItems: "center",
+                    width: "80px",
+                    height: "80px",
                   }}
                 >
-                  <img src={s.imageURL} width="40" />
+                  <img src={s.imageURL} width={40} />
                   <Typography variant="caption">{s.name}</Typography>
                 </Box>
               </Grid>
