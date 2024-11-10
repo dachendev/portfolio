@@ -3,7 +3,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid2";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
@@ -50,10 +49,8 @@ const App: React.FC = () => {
       <CssBaseline />
       <Container>
         <div>
-          <Typography variant="h1">Jacob Dachenhaus</Typography>
-          <Typography variant="body1">
-            Hi, I'm Jacob. I'm a Full Stack Developer.
-          </Typography>
+          <h1>Jacob Dachenhaus</h1>
+          <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/dachendev/">
@@ -70,7 +67,7 @@ const App: React.FC = () => {
           </ul>
         </div>
         <div>
-          <Typography variant="h2">Education</Typography>
+          <h2>Education</h2>
           <ul>
             {educations.map((e, i) => (
               <li key={i}>
@@ -84,26 +81,26 @@ const App: React.FC = () => {
           </ul>
         </div>
         <div>
-          <Typography variant="h2">Projects</Typography>
+          <h2>Projects</h2>
           <Grid container spacing={2}>
             <Grid>
               <Card>
                 <CardContent>
-                  <Typography variant="h3">Portfolio</Typography>
+                  <h3>Portfolio</h3>
                 </CardContent>
               </Card>
             </Grid>
             <Grid>
               <Card>
                 <CardContent>
-                  <Typography variant="h3">Workout Buddy</Typography>
+                  <h3>Workout Buddy</h3>
                 </CardContent>
               </Card>
             </Grid>
           </Grid>
         </div>
         <div>
-          <Typography variant="h2">Skills</Typography>
+          <h2>Skills</h2>
           <Grid container spacing={2}>
             {skills.map((s, i) => (
               <Grid key={i}>
@@ -118,7 +115,7 @@ const App: React.FC = () => {
                   }}
                 >
                   <img src={s.imageURL} width={40} />
-                  <Typography variant="caption">{s.name}</Typography>
+                  <small>{s.name}</small>
                 </Box>
               </Grid>
             ))}
