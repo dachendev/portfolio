@@ -9,6 +9,19 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import React from "react";
 
+const socials = [
+  {
+    text: "LinkedIn",
+    icon: <LinkedInIcon />,
+    href: "https://www.linkedin.com/in/dachendev/",
+  },
+  {
+    text: "GitHub",
+    icon: <GitHubIcon />,
+    href: "https://github.com/dachendev",
+  },
+];
+
 const Hero: React.FC = () => {
   return (
     <div>
@@ -17,21 +30,12 @@ const Hero: React.FC = () => {
           <h1>Jacob Dachenhaus</h1>
           <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
           <List>
-            <ListItemButton
-              component="a"
-              href="https://www.linkedin.com/in/dachendev/"
-            >
-              <ListItemIcon>
-                <LinkedInIcon />
-              </ListItemIcon>
-              <ListItemText>LinkedIn</ListItemText>
-            </ListItemButton>
-            <ListItemButton component="a" href="https://github.com/dachendev">
-              <ListItemIcon>
-                <GitHubIcon />
-              </ListItemIcon>
-              <ListItemText>GitHub</ListItemText>
-            </ListItemButton>
+            {socials.map((s, i) => (
+              <ListItemButton key={i} component="a" href={s.href}>
+                <ListItemIcon>{s.icon}</ListItemIcon>
+                <ListItemText>{s.text}</ListItemText>
+              </ListItemButton>
+            ))}
             <ListItem>
               <ListItemIcon>
                 <EmailIcon />
