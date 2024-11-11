@@ -1,6 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid2";
 import LaunchIcon from "@mui/icons-material/Launch";
 import React from "react";
@@ -29,6 +30,10 @@ const Projects: React.FC = () => {
         {projects.map((p, i) => (
           <Grid key={i} size={{ xs: 12, md: 6 }}>
             <Card>
+              <CardMedia
+                sx={{ height: 150 }}
+                image="https://placehold.co/600x400"
+              />
               <CardContent>
                 <h3>{p.name}</h3>
                 <p>{p.description}</p>
