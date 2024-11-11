@@ -10,12 +10,14 @@ const projects = [
   {
     name: "Portfolio",
     description: "A portfolio website to showcase my skills.",
-    ghURL: "#",
+    liveURL: null,
+    ghURL: "https://github.com/dachendev/portfolio",
   },
   {
     name: "Workout Buddy",
     description: "An app to track workout progress and stay accountable.",
-    ghURL: "#",
+    liveURL: null,
+    ghURL: "https://github.com/dachendev/workout-buddy",
   },
 ];
 
@@ -32,9 +34,11 @@ const Projects: React.FC = () => {
                 <p>{p.description}</p>
 
                 <Stack direction="row" spacing={2}>
-                  <a href="#">
-                    <LaunchIcon />
-                  </a>
+                  {p.liveURL && (
+                    <a href={p.liveURL}>
+                      <LaunchIcon />
+                    </a>
+                  )}
                   <a href={p.ghURL}>
                     <GitHubIcon />
                   </a>
