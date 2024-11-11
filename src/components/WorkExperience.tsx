@@ -16,7 +16,7 @@ const WorkExperience: React.FC = () => {
   return (
     <div>
       <h2>Work Experience</h2>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{ p: 2 }}>
         {experiences.map((e, i) => (
           <Grid key={i} size={{ xs: 12, sm: 6 }} sx={{ textAlign: "center" }}>
             <img src={e.imageURL} height="40" alt={e.name} />
