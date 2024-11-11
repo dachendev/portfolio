@@ -8,6 +8,10 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import EmailIcon from "@mui/icons-material/Email";
 import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 
 const educations = [
   {
@@ -173,13 +177,16 @@ const App: React.FC = () => {
               {skillGroups.map((g, i) => (
                 <Grid size={{ xs: 12, sm: 6, md: 3 }} key={i}>
                   <h3>{g.name}</h3>
-                  <ul>
+                  <List>
                     {g.skills.map((s, j) => (
-                      <li key={j}>
-                        <img src={s.imageURL} height="20" /> {s.name}
-                      </li>
+                      <ListItem key={j}>
+                        <ListItemIcon>
+                          <img src={s.imageURL} height="24" />
+                        </ListItemIcon>
+                        <ListItemText>{s.name}</ListItemText>
+                      </ListItem>
                     ))}
-                  </ul>
+                  </List>
                 </Grid>
               ))}
             </Grid>
