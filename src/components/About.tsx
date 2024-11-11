@@ -21,10 +21,10 @@ const educations = [
   },
 ];
 
-const Education: React.FC = () => {
+const About: React.FC = () => {
   return (
     <div>
-      <h2>Education</h2>
+      <h2>About</h2>
       <Timeline>
         {educations.map((e, i) => (
           <TimelineItem key={i}>
@@ -46,4 +46,4 @@ const Education: React.FC = () => {
   );
 };
 
-export default Education;
+export default About;
