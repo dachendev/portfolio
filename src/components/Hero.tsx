@@ -31,7 +31,12 @@ const Hero: React.FC = () => {
           <p>Full Stack Developer</p>
           <List>
             {socials.map((s, i) => (
-              <ListItemButton key={i} component="a" href={s.href}>
+              <ListItemButton
+                key={i}
+                component="a"
+                href={s.href}
+                target="_blank"
+              >
                 <ListItemIcon>{s.icon}</ListItemIcon>
                 <ListItemText>{s.text}</ListItemText>
               </ListItemButton>

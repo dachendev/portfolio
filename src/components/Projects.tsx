@@ -35,11 +35,11 @@ const Projects: React.FC = () => {
 
                 <Stack direction="row" spacing={2}>
                   {p.liveURL && (
-                    <a href={p.liveURL}>
+                    <a href={p.liveURL} target="_blank">
                       <LaunchIcon />
                     </a>
                   )}
-                  <a href={p.ghURL}>
+                  <a href={p.ghURL} target="_blank">
                     <GitHubIcon />
                   </a>
                 </Stack>
