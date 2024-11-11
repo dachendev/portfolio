@@ -2,7 +2,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Grid from "@mui/material/Grid2";
+import LaunchIcon from "@mui/icons-material/Launch";
 import React from "react";
+import Stack from "@mui/material/Stack";
 
 const projects = [
   {
@@ -28,9 +30,15 @@ const Projects: React.FC = () => {
               <CardContent>
                 <h3>{p.name}</h3>
                 <p>{p.description}</p>
-                <a href={p.ghURL}>
-                  <GitHubIcon />
-                </a>
+
+                <Stack direction="row" spacing={2}>
+                  <a href="#">
+                    <LaunchIcon />
+                  </a>
+                  <a href={p.ghURL}>
+                    <GitHubIcon />
+                  </a>
+                </Stack>
               </CardContent>
             </Card>
           </Grid>
