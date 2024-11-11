@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import React from "react";
@@ -15,16 +16,18 @@ const experiences = [
 
 const WorkExperience: React.FC = () => {
   return (
-    <Container>
-      <h2>Work Experience</h2>
-      <Grid container spacing={2} sx={{ p: 2 }}>
-        {experiences.map((e, i) => (
-          <Grid key={i} size={{ xs: 12, sm: 6 }} sx={{ textAlign: "center" }}>
-            <img src={e.imageURL} height="40" alt={e.name} />
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+    <Box sx={{ background: "#808080" }}>
+      <Container>
+        <h2>Work Experience</h2>
+        <Grid container spacing={2} sx={{ p: 2 }}>
+          {experiences.map((e, i) => (
+            <Grid key={i} size={{ xs: 12, sm: 6 }} sx={{ textAlign: "center" }}>
+              <img src={e.imageURL} height="40" alt={e.name} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
