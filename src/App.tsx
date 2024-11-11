@@ -1,6 +1,7 @@
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 import React from "react";
+import Navbar from "./components/Navbar";
 import Education from "./components/Education";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -13,6 +14,7 @@ const App: React.FC = () => {
     <>
       <CssBaseline />
       <Container>
+        <Navbar />
         <Hero />
         <Education />
         <WorkExperience />
