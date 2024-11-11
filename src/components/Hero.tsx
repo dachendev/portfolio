@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
       <Grid container spacing={2} sx={{ paddingTop: 5 }}>
         <Grid size={{ xs: 12, sm: 6 }}>
           <h1>Jacob Dachenhaus</h1>
-          <p>Hi, I'm Jacob. I'm a Full Stack Developer.</p>
+          <p>Full Stack Developer</p>
           <List>
             {socials.map((s, i) => (
               <ListItemButton key={i} component="a" href={s.href}>
