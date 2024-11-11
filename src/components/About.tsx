@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "@mui/material/Container";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -23,7 +24,7 @@ const educations = [
 
 const About: React.FC = () => {
   return (
-    <div>
+    <Container>
       <h2>About</h2>
       <Timeline>
         {educations.map((e, i) => (
@@ -42,7 +43,7 @@ const About: React.FC = () => {
           </TimelineItem>
         ))}
       </Timeline>
-    </div>
+    </Container>
   );
 };
 

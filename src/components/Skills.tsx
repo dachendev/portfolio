@@ -1,3 +1,4 @@
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -47,7 +48,7 @@ const skillGroups = [
 
 const Skills: React.FC = () => {
   return (
-    <div>
+    <Container>
       <h2>Skills</h2>
       <div>
         <Grid container spacing={2}>
@@ -68,7 +69,7 @@ const Skills: React.FC = () => {
           ))}
         </Grid>
       </div>
-    </div>
+    </Container>
   );
 };
 

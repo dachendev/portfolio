@@ -1,3 +1,4 @@
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import React from "react";
 
@@ -14,7 +15,7 @@ const experiences = [
 
 const WorkExperience: React.FC = () => {
   return (
-    <div>
+    <Container>
       <h2>Work Experience</h2>
       <Grid container spacing={2} sx={{ p: 2 }}>
         {experiences.map((e, i) => (
@@ -23,7 +24,7 @@ const WorkExperience: React.FC = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 

@@ -1,3 +1,4 @@
+import Container from "@mui/material/Container";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -24,7 +25,7 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <div>
+    <Container>
       <h2>Projects</h2>
       <Grid container spacing={2}>
         {projects.map((p, i) => (
@@ -53,7 +54,7 @@ const Projects: React.FC = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 
