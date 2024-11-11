@@ -48,7 +48,7 @@ const skillGroups = [
 
 const Skills: React.FC = () => {
   return (
-    <Container>
+    <Container maxWidth="xl" sx={{ pt: 2, pb: 8 }}>
       <h2>Skills</h2>
       <div>
         <Grid container spacing={2}>

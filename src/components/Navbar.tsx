@@ -4,8 +4,8 @@ import Stack from "@mui/material/Stack";
 
 const Navbar = () => {
   return (
-    <Container>
-      <Box sx={{ display: "flex", p: 2 }}>
+    <Container maxWidth="xl">
+      <Box sx={{ display: "flex", py: 2 }}>
         <div>JD</div>
         <Stack direction="row" spacing={2} sx={{ marginLeft: "auto" }}>
           <a href="#education">Education</a>

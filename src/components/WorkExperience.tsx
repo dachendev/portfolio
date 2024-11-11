@@ -17,7 +17,7 @@ const experiences = [
 const WorkExperience: React.FC = () => {
   return (
     <Box sx={{ background: "#808080" }}>
-      <Container>
+      <Container maxWidth="xl" sx={{ pt: 2, pb: 8 }}>
         <h2>Work Experience</h2>
         <Grid container spacing={2} sx={{ p: 2 }}>
           {experiences.map((e, i) => (

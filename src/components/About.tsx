@@ -24,7 +24,7 @@ const educations = [
 
 const About: React.FC = () => {
   return (
-    <Container>
+    <Container maxWidth="xl" sx={{ pt: 2, pb: 8 }}>
       <h2>About</h2>
       <Timeline
         sx={{

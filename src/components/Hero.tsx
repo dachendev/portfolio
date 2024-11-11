@@ -27,13 +27,17 @@ const socials = [
 
 const Hero: React.FC = () => {
   return (
-    <Container>
-      <Box sx={{ height: "100vh" }}>
-        <Grid container spacing={2} sx={{ paddingTop: 5 }}>
-          <Grid size={{ xs: 12, sm: 6 }}>
-            <h1>Jacob Dachenhaus</h1>
+    <Container maxWidth="xl" sx={{ pt: 2, pb: 8 }}>
+      <Box>
+        <Grid container spacing={2}>
+          <Grid size={{ xs: 12, sm: 8 }}>
+            <h1 style={{ fontSize: "calc(2rem + 1.25vw)" }}>
+              Hi, I'm Jacob Dachenhaus.
+              <br />
+              Full Stack Developer & UX/UI Designer.
+            </h1>
             <p>Full Stack Developer</p>
-            <List>
+            <List sx={{ mb: 4 }}>
               {socials.map((s, i) => (
                 <ListItemButton
                   key={i}
@@ -53,11 +57,15 @@ const Hero: React.FC = () => {
               </ListItem>
             </List>
             <Grid container spacing={2}>
-              <Button variant="contained">Hire Me</Button>
-              <Button variant="outlined">Previous Work</Button>
+              <Button variant="contained" size="large">
+                Hire Me
+              </Button>
+              <Button variant="outlined" size="large">
+                Previous Work
+              </Button>
             </Grid>
           </Grid>
-          <Grid size={{ xs: 12, sm: 6 }} sx={{ textAlign: "center" }}>
+          <Grid size={{ xs: 12, sm: 4 }} sx={{ textAlign: "center" }}>
             <img src="duck.jpeg" width="250" />
           </Grid>
         </Grid>

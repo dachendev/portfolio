@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <Container>
+    <Container maxWidth="xl" sx={{ py: 2 }}>
       <Box sx={{ textAlign: "center" }}>
         <p>Copyright &copy; {new Date().getFullYear()} Jacob Dachenhaus</p>
       </Box>

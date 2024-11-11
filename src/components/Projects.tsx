@@ -25,7 +25,7 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <Container>
+    <Container maxWidth="xl" sx={{ pt: 2, pb: 8 }}>
       <h2>Projects</h2>
       <Grid container spacing={2}>
         {projects.map((p, i) => (
