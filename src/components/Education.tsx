@@ -1,5 +1,10 @@
 import React from "react";
-import Box from "@mui/material/Box";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
 
 const educations = [
   {
@@ -20,15 +25,23 @@ const Education: React.FC = () => {
   return (
     <div>
       <h2>Education</h2>
-      {educations.map((e, i) => (
-        <Box key={i} sx={{ p: 2 }}>
-          <h3>{e.name}</h3>
-          <div>{e.tagline}</div>
-          <div>
-            {e.startDate} - {e.endDate}
-          </div>
-        </Box>
-      ))}
+      <Timeline>
+        {educations.map((e, i) => (
+          <TimelineItem key={i}>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <h3>{e.name}</h3>
+              <div>{e.tagline}</div>
+              <div>
+                {e.startDate} - {e.endDate}
+              </div>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
     </div>
   );
 };
